@@ -39,7 +39,7 @@ A 4-node AI inference and SRE automation cluster with **29 custom automation pri
 
 ## 🎖️ Background
 
-- **U.S. Army** — 35N Signals Intelligence Analyst, TS/SCI clearance
+- **U.S. Army** — 35N Signals Intelligence Analyst; prior TS/SCI clearance (expired 2022)
 - **Culinary** — Michelin-starred restaurants (Press, Understudy), farm-to-table operations
 - **Farming** — Press Farm, Yountville CA — precision agriculture and operations management
 
