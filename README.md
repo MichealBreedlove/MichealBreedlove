@@ -1,6 +1,6 @@
 # 👋 Hi, I'm Micheal Breedlove
 
-🛡️ Cybersecurity Student | ⚙️ SRE & Automation | 🤖 AI/ML Operations | 🇺🇸 Army Veteran (35N SIGINT)
+🛡️ Cybersecurity Student | ⚙️ SRE & Automation | 🤖 AI/ML Operations | US Army Veteran (35N SIGINT)
 
 ---
 
