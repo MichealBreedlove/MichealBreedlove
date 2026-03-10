@@ -7,9 +7,9 @@ Fairfield, CA (remote/hybrid)
 
 ## Fastest proof
 
-- **Architecture:** [AI Cluster — 4-node lab overview](https://michealbreedlove.com/ai-cluster.html)
+- **Architecture:** [AI Cluster - 4-node lab overview](https://michealbreedlove.com/ai-cluster.html)
 - **Flagship work:** [Case studies (SRE pipeline, GitOps backups)](https://michealbreedlove.com/projects.html#flagship)
-- **Proof Pack:** [Artifacts — dashboards, postmortems, configs, test reports](https://michealbreedlove.com/proof.html)
+- **Proof Pack:** [Artifacts - dashboards, postmortems, configs, test reports](https://michealbreedlove.com/proof.html)
 - **Resume:** [PDF](https://michealbreedlove.com/assets/Micheal-Breedlove-Resume.pdf)
 - **Portfolio:** [michealbreedlove.com](https://michealbreedlove.com)
 
@@ -63,8 +63,8 @@ Automated daily backups from 4 nodes with CI-enforced secret scanning (11 patter
 
 ## Background
 
-U.S. Army Veteran — 35N Signals Intelligence Analyst (clearance expired 2022)
-B.S. Cybersecurity & Information Assurance — WGU (in progress)
+U.S. Army Veteran - 35N Signals Intelligence Analyst (prior TS/SCI, CT polygraph, expired 2020)
+B.S. Cybersecurity & Information Assurance - WGU (in progress)
 
 ---
 
