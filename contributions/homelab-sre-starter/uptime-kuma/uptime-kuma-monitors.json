@@ -1,0 +1,86 @@
+{
+  "description": "Example Uptime Kuma monitor definitions for homelab services. Import via API or configure manually in the dashboard.",
+  "monitors": [
+    {
+      "name": "Plex",
+      "type": "http",
+      "url": "http://plex.local:32400/web",
+      "interval": 60,
+      "retryInterval": 30,
+      "maxretries": 3,
+      "accepted_statuscodes": ["200-299", "301", "302"],
+      "tags": ["media"]
+    },
+    {
+      "name": "TrueNAS",
+      "type": "http",
+      "url": "http://nas.local/api/v2.0/system/state",
+      "interval": 60,
+      "retryInterval": 30,
+      "maxretries": 3,
+      "accepted_statuscodes": ["200-299"],
+      "tags": ["storage"]
+    },
+    {
+      "name": "Proxmox - Node 1",
+      "type": "http",
+      "url": "https://10.1.1.2:8006",
+      "interval": 60,
+      "ignoreTls": true,
+      "retryInterval": 30,
+      "maxretries": 3,
+      "tags": ["hypervisor"]
+    },
+    {
+      "name": "Proxmox - Node 2",
+      "type": "http",
+      "url": "https://10.1.1.4:8006",
+      "interval": 60,
+      "ignoreTls": true,
+      "retryInterval": 30,
+      "maxretries": 3,
+      "tags": ["hypervisor"]
+    },
+    {
+      "name": "Proxmox - Node 3",
+      "type": "http",
+      "url": "https://10.1.1.5:8006",
+      "interval": 60,
+      "ignoreTls": true,
+      "retryInterval": 30,
+      "maxretries": 3,
+      "tags": ["hypervisor"]
+    },
+    {
+      "name": "DNS Resolution",
+      "type": "dns",
+      "hostname": "example.com",
+      "dns_resolve_server": "10.1.1.1",
+      "interval": 30,
+      "tags": ["network"]
+    },
+    {
+      "name": "OPNsense Gateway",
+      "type": "ping",
+      "hostname": "10.1.1.1",
+      "interval": 30,
+      "tags": ["network"]
+    },
+    {
+      "name": "Grafana",
+      "type": "http",
+      "url": "http://10.1.1.25:3000/api/health",
+      "interval": 60,
+      "accepted_statuscodes": ["200-299"],
+      "tags": ["monitoring"]
+    },
+    {
+      "name": "Prometheus",
+      "type": "http",
+      "url": "http://10.1.1.25:9090/-/healthy",
+      "interval": 60,
+      "accepted_statuscodes": ["200-299"],
+      "tags": ["monitoring"]
+    }
+  ]
+}

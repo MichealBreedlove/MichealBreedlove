@@ -1,0 +1,35 @@
+{
+  "channels": {
+    "alertmanager": {
+      "url": "http://10.1.1.25:9093",
+      "generator_url": "http://10.1.1.25:3000/d/slo-status-homelab"
+    },
+    "slack": {
+      "webhook_url": "https://hooks.slack.com/services/YOUR/WEBHOOK/URL"
+    },
+    "email": {
+      "smtp_host": "smtp.example.com",
+      "smtp_port": 587,
+      "username": "alerts@example.com",
+      "from": "homelab-alerts@example.com",
+      "to": ["admin@example.com"]
+    }
+  },
+  "routes": [
+    {
+      "severity": "critical",
+      "channels": ["alertmanager", "slack", "email"],
+      "description": "Burn rate >= 10x — SLO breach imminent, notify all channels"
+    },
+    {
+      "severity": "warning",
+      "channels": ["alertmanager", "slack"],
+      "description": "Burn rate >= 3x — accelerating budget consumption"
+    },
+    {
+      "severity": "info",
+      "channels": ["slack"],
+      "description": "Burn rate elevated but not critical"
+    }
+  ]
+}

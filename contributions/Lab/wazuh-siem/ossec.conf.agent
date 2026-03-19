@@ -1,0 +1,69 @@
+<!-- Wazuh agent configuration for homelab nodes
+     Place in /var/ossec/etc/ossec.conf on each agent node -->
+<ossec_config>
+  <client>
+    <server>
+      <address>MANAGER_IP</address>
+      <port>1514</port>
+      <protocol>tcp</protocol>
+    </server>
+    <enrollment>
+      <enabled>yes</enabled>
+    </enrollment>
+  </client>
+
+  <!-- Log collection: system logs -->
+  <localfile>
+    <log_format>syslog</log_format>
+    <location>/var/log/syslog</location>
+  </localfile>
+
+  <localfile>
+    <log_format>syslog</log_format>
+    <location>/var/log/auth.log</location>
+  </localfile>
+
+  <!-- Log collection: Proxmox-specific -->
+  <localfile>
+    <log_format>syslog</log_format>
+    <location>/var/log/pveproxy/access.log</location>
+  </localfile>
+
+  <localfile>
+    <log_format>syslog</log_format>
+    <location>/var/log/pve/tasks/*</location>
+  </localfile>
+
+  <!-- Log collection: Docker/container logs -->
+  <localfile>
+    <log_format>json</log_format>
+    <location>/var/log/containers/*.log</location>
+  </localfile>
+
+  <!-- File integrity monitoring -->
+  <syscheck>
+    <frequency>43200</frequency>
+    <directories check_all="yes" realtime="yes">/etc,/usr/bin,/usr/sbin</directories>
+    <directories check_all="yes">/boot</directories>
+    <ignore>/etc/mtab</ignore>
+    <ignore>/etc/hosts.deny</ignore>
+    <ignore>/etc/adjtime</ignore>
+    <ignore>/etc/resolv.conf</ignore>
+  </syscheck>
+
+  <!-- Rootcheck: detect rootkits and anomalies -->
+  <rootcheck>
+    <disabled>no</disabled>
+    <frequency>43200</frequency>
+  </rootcheck>
+
+  <!-- Vulnerability detection -->
+  <wodle name="syscollector">
+    <disabled>no</disabled>
+    <interval>1h</interval>
+    <scan_on_start>yes</scan_on_start>
+    <packages>yes</packages>
+    <ports all="no">yes</ports>
+    <processes>yes</processes>
+  </wodle>
+</ossec_config>
