@@ -1,7 +1,10 @@
 # Micheal Breedlove
 
-Security Engineering · AI Infrastructure · SRE · GitOps
+Security Engineering · DevSecOps · SRE · AI Infrastructure
 Fairfield, CA (remote/hybrid)
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=MichealBreedlove&show_icons=true&theme=dark&hide_border=true&count_private=true)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=MichealBreedlove&layout=compact&theme=dark&hide_border=true)
 
 ---
 
@@ -15,18 +18,66 @@ Fairfield, CA (remote/hybrid)
 
 ---
 
+## Background
+
+**U.S. Army Veteran — 35N Signals Intelligence Analyst**
+Prior TS/SCI clearance with Counter-Terrorism polygraph (expired 2020). Spent years doing technical collection, signal analysis, and operational reporting in high-stakes SIGINT environments. That background shapes how I think about systems: adversarial assumptions, data integrity, need-to-know access, and operational security are defaults, not afterthoughts.
+
+**B.S. Cybersecurity & Information Assurance** — WGU (in progress, ~23% complete)
+**VA Disability:** 20% (service-connected)
+
+---
+
+## Certifications
+
+| Cert | Status |
+|------|--------|
+| CompTIA TECH+ (ITF+) | Earned |
+| CompTIA A+ | Next target |
+| CompTIA Network+ | Planned |
+| CompTIA Security+ | Planned |
+| CompTIA Linux+ | Planned |
+| CompTIA CySA+ | Planned |
+| CompTIA Pentest+ | Planned |
+
+---
+
+## Currently working on
+
+- **NAS rebuild** — migrating TrueNAS to a 3-pool ZFS architecture (fast NVMe, bulk spinning, cold archive)
+- **WGU coursework** — progressing through B.S. Cybersecurity, currently ~23% through the program
+- **CompTIA A+ prep** — working through objectives, targeting exam in the near term
+- **Homelab security hardening** — Wazuh SIEM rule tuning, detection coverage mapping to MITRE ATT&CK
+
+---
+
+## Homelab — Aegis AI Cluster
+
+A production-grade 4-node homelab built for AI orchestration, security operations, and SRE practice.
+
+| Node | Role | Specs |
+|------|------|-------|
+| **Jasper** | AI orchestrator, gaming/compute | i9-13900K, 64GB RAM, RTX 4090 |
+| **Nova** | Proxmox primary hypervisor | — |
+| **Mira** | Proxmox memory/analysis node | — |
+| **Orin** | Proxmox heavy compute/isolation | — |
+
+**Fabric:** 40GbE interconnect
+**Storage:** TrueNAS with ZFS, multi-pool architecture
+**Security:** OPNsense firewall, Wazuh SIEM
+**Observability:** Prometheus + Grafana, burn-rate alerting, SLO tracking
+**AI:** Distributed OpenClaw agent swarm, Pentagi AI pentesting platform, local LLM inference
+
+---
+
 ## What I build
 
-I build secure, reliable infrastructure and automation systems with measurable outcomes.
-
-Current work focuses on:
+Secure, reliable infrastructure and automation with measurable outcomes.
 
 - Reliability engineering (SLOs, error budgets, burn-rate alerting)
-- Infrastructure automation and GitOps
-- Security-focused system design
-- Incident response and operational tooling
-
-All work is demonstrated through a real multi-node homelab and documented case studies.
+- Infrastructure automation and GitOps pipelines
+- Security-focused system design and detection engineering
+- Incident response tooling and postmortem frameworks
 
 ---
 
@@ -34,7 +85,7 @@ All work is demonstrated through a real multi-node homelab and documented case s
 
 ### AI Cluster Architecture
 
-Interactive architecture overview of a 4-node AI and infrastructure lab: GPU inference, Proxmox virtualization, SRE automation, and security boundaries.
+Interactive architecture overview of the 4-node Aegis lab: GPU inference, Proxmox virtualization, SRE automation, and security boundaries.
 
 [View architecture](https://michealbreedlove.com/ai-cluster.html)
 
@@ -52,19 +103,14 @@ Automated daily backups from 4 nodes with CI-enforced secret scanning (11 patter
 
 ---
 
-## Tooling
+## Skills
 
-**Languages:** Python, Bash, PowerShell, SQL
-**Infrastructure:** Linux, Proxmox, networking, storage
-**Automation:** GitHub Actions, Ansible, systemd
-**Practices:** SLOs, incident response, postmortems, least privilege, secrets hygiene
-
----
-
-## Background
-
-U.S. Army Veteran - 35N Signals Intelligence Analyst (prior TS/SCI, CT polygraph, expired 2020)
-B.S. Cybersecurity & Information Assurance - WGU (in progress)
+**Languages:** Python, Bash, PowerShell
+**Infrastructure:** Proxmox, ZFS, OPNsense, Linux
+**Observability:** Prometheus, Grafana
+**Security:** Wazuh SIEM, MITRE ATT&CK, secrets hygiene, least privilege
+**Automation:** Docker, Git, GitHub Actions, systemd
+**Practices:** SLOs, incident response, postmortems, GitOps
 
 ---
 
