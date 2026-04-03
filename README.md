@@ -32,7 +32,7 @@ Prior TS/SCI clearance with Counter-Terrorism polygraph (expired 2020). Spent ye
 
 | Cert | Status |
 |------|--------|
-| CompTIA TECH+ (ITF+) | Earned |
+| CompTIA TECH+ (ITF+) | ✅ Earned |
 | CompTIA A+ | Next target |
 | CompTIA Network+ | Planned |
 | CompTIA Security+ | Planned |
@@ -44,10 +44,10 @@ Prior TS/SCI clearance with Counter-Terrorism polygraph (expired 2020). Spent ye
 
 ## Currently working on
 
-- **NAS rebuild** — migrating TrueNAS to a 3-pool ZFS architecture (fast NVMe, bulk spinning, cold archive)
+- **Network hardening** — completed VLAN segmentation across 10 VLANs, migrated DHCP to Kea, deployed UniFi U7-Pro-XG-B, firewall rule migration after OPNsense reinstall
 - **WGU coursework** — progressing through B.S. Cybersecurity, currently ~23% through the program
 - **CompTIA A+ prep** — working through objectives, targeting exam in the near term
-- **Homelab security hardening** — Wazuh SIEM rule tuning, detection coverage mapping to MITRE ATT&CK
+- **Homelab security** — Wazuh SIEM tuning, Pentagi AI pentesting platform, MCP server for live cluster tooling in Claude
 
 ---
 
@@ -58,15 +58,16 @@ A production-grade 4-node homelab built for AI orchestration, security operation
 | Node | Role | Specs |
 |------|------|-------|
 | **Jasper** | AI orchestrator, gaming/compute | i9-13900K, 64GB RAM, RTX 4090 |
-| **Nova** | Proxmox primary hypervisor | — |
-| **Mira** | Proxmox memory/analysis node | — |
-| **Orin** | Proxmox heavy compute/isolation | — |
+| **Nova** | Proxmox primary hypervisor | Intel N305, 32GB DDR5 |
+| **Mira** | Proxmox memory/analysis node | i7-2600K, 16GB |
+| **Orin** | Proxmox heavy compute/isolation | Dual Xeon E5-2667v4, 16GB ECC |
 
-**Fabric:** 40GbE interconnect
-**Storage:** TrueNAS with ZFS, multi-pool architecture
-**Security:** OPNsense firewall, Wazuh SIEM
+**Fabric:** 10GbE interconnect, VLAN-segmented (10 VLANs)
+**Storage:** TrueNAS with ZFS, 3-pool architecture (fast/bulk/archive)
+**Security:** OPNsense firewall, Wazuh SIEM, Pentagi AI pentesting
 **Observability:** Prometheus + Grafana, burn-rate alerting, SLO tracking
-**AI:** Distributed OpenClaw agent swarm, Pentagi AI pentesting platform, local LLM inference
+**AI:** Distributed OpenClaw agent swarm, local LLM inference (Ollama/RTX 4090)
+**MCP:** [aegis-cluster-mcp](https://github.com/MichealBreedlove/aegis-cluster-mcp) — native Claude tool access to every cluster layer
 
 ---
 
@@ -89,6 +90,12 @@ Interactive architecture overview of the 4-node Aegis lab: GPU inference, Proxmo
 
 [View architecture](https://michealbreedlove.com/ai-cluster.html)
 
+### Aegis Cluster MCP
+
+An MCP server giving Claude native tool access to every layer of the cluster — Proxmox, TrueNAS, OPNsense, Prometheus, and Wazuh. 20 tools. No copy-pasting API output.
+
+[View repo](https://github.com/MichealBreedlove/aegis-cluster-mcp)
+
 ### Reliability Pipeline (SRE)
 
 SLO evaluation, burn-rate alerting, incident tracking, postmortem generation, and safety gates that block risky automation when reliability is degraded.
@@ -106,9 +113,9 @@ Automated daily backups from 4 nodes with CI-enforced secret scanning (11 patter
 ## Skills
 
 **Languages:** Python, Bash, PowerShell
-**Infrastructure:** Proxmox, ZFS, OPNsense, Linux
-**Observability:** Prometheus, Grafana
-**Security:** Wazuh SIEM, MITRE ATT&CK, secrets hygiene, least privilege
+**Infrastructure:** Proxmox, ZFS/TrueNAS, OPNsense, Linux, Ansible
+**Observability:** Prometheus, Grafana, Wazuh SIEM
+**Security:** MITRE ATT&CK, secrets hygiene, VLAN segmentation, least privilege
 **Automation:** Docker, Git, GitHub Actions, systemd
 **Practices:** SLOs, incident response, postmortems, GitOps
 
